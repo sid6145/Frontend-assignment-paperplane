@@ -1,6 +1,7 @@
+/* Google fonts, Ubuntu */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-/*Header section*/
 
+/*Header section*/
 /* Navbar */
 *{
     margin: 0;
@@ -14,7 +15,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 10vh;
+    min-height: 9vh;
 }
 
 .nav-items{
@@ -26,7 +27,7 @@
 .nav-items-right{
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 28%;
 }
 
 .nav-links{
@@ -51,16 +52,18 @@
 .search-input{
     height: 30px;
     padding: 16px 0;
-    padding-left: 40px;
+    padding-left: 30px;
     width: 200px;
     border-radius: 20px;
     border: none;
     background-color: #f3f3f3;
 }
 
-.fa-search{
+
+.search-icon{
     position: absolute;
-    padding: 10px;
+    padding-top: 5px ;
+    padding-left: 10px;
     min-width: 40px;
     color: #b4b4b4;
 }
@@ -87,7 +90,7 @@
 
 /* Head Section */
 .head-section{
-    min-height: 16vh;
+    min-height: 14vh;
     background-color: #93fae3;
     text-align: center;
     padding: 35px;
@@ -98,16 +101,18 @@
        font-size: 30px;
 }
 
-.fa-times{
+.cross-icon{
     position: absolute;
-    top: 16%;
+    top: 13%;
     left: 90%;
     color:#427067 ;
-    font-size: 28px;
+    font-size: 38px;
 }
 
+
+/* 3 tabs in head section */
 .head-tabs{
-    min-height: 16vh;
+    min-height: 13vh;
     background-color: #93fae3;
     display: flex;
     justify-content: center;
@@ -115,7 +120,7 @@
 
 .head-tabs button{
     width: 350px;
-    height: 100px;
+    height: 80px;
     background: transparent;
     color:#427067;
     font-size: 20px;
@@ -123,17 +128,17 @@
 
 .left-btn{
     border: none;
-   border-top: 1px solid #7c7b7b;
+   border-top: 1px solid #427067;
 }
 
 .middle-btn{
-    border: 1px solid #7c7b7b;
+    border: 1px solid #427067;
     border-bottom: none;
 }
 
 .right-btn{
     border: none;
-    border-top: 1px solid #7c7b7b;
+    border-top: 1px solid #427067;
 }
 
 /* main secion */
@@ -168,19 +173,25 @@ main{
 
 
 .product-card{
-    height: 300px;
+    height: 320px;
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: white;
-    margin-bottom: 50px;
+    margin: 20px 10px;
+    transition: 0.3s ease;
+}
+
+.product-card:hover{
+    box-shadow: 3px 3px 10px rgb(192, 190, 190);
+   
 }
 
 .product-img{
     align-self: center;
     width: 300px;
-    height: 200px;
+    height: 220px;
     padding: 0 30px;
 }
 
@@ -194,9 +205,26 @@ main{
     border: none;
     background-color:#2fdab8 ;
     color: white;
+    transition: 0.3s ease;
 }
 
-.icon-container{
+.price-btn:hover{
+    cursor: pointer;
+}
+
+.icons{
+    width: 250px;
+    padding: 10px;
+    color: #b4b4b4;
+}
+
+.icons i{
+    margin-right: 3px;
+    font-size: 20px;
+}
+
+
+.avatar-container{
     display: flex;
     justify-content: flex-start;
     align-items: end;    ;
@@ -204,7 +232,7 @@ main{
     height: 8vh;
 }
 
-.icon-container p{
+.avatar-container p{
     padding-top: 15px;
     margin-left: 5px;
     font-size: 15px;
@@ -212,15 +240,40 @@ main{
 }
 
 .avatar-img{
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
+}
+
+.avatar2{
+    position: relative;
+    right: 2%;
+}
+
+
+/* Footer section */
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 17px;
+    color: #b4b4b4;
+    height: 10px;
 }
 
 
 
 
+/* Media queries */
 
+@media screen and (max-width: 1100px) {
+    .nav-items-right{
+        width: 44%;
+    }
+}
 
 @media screen and (max-width:768px){
     body{
@@ -231,7 +284,7 @@ main{
         position: absolute;
         left: 0;
         height: 100vh;
-        top: 10vh;
+        top: 8vh;
         background: white;
         display: flex;
         flex-direction: column;
@@ -250,18 +303,18 @@ main{
     }
 
     .nav-items-right{
-        justify-content: space-around;
-        width: 70%;
+        width: 67%;
     }
 
     .search-input{
         height: 30px;
         padding: 16px 0;
         padding-left: 40px;
-        width: 120px;
+        width: 100px;
         border-radius: 20px;
         border: none;
         background-color: #f3f3f3;
+        transition: 0.3s ease;
     }
 
     .head-text{
@@ -273,12 +326,24 @@ main{
         margin-left: 0;
     }
 
+    .head-tabs{
+        height: 13vh;
+    }
+
     .head-tabs button{
         width: 200px;
-        height: 100px;
+        height: 80px;
         background: transparent;
         color:#427067;
         font-size: 18px;
     }   
 
+    .cross-icon{
+        font-size: 33px;
+    }
+
+    /* Expands search bar on focused */
+    .expand{
+        width: 160px;
+    }
 }
